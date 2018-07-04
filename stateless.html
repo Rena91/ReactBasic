@@ -1,0 +1,39 @@
+<html>
+<head>
+        <style>
+
+            .Banner{
+              color:aqua;
+            }
+            .Fun{
+                color: blueviolet;
+            }      
+       </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script> -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <title>Basic React JS</title>
+</head>
+<body>
+    <div id = "react-container"></div>
+    <script type="text/babel">
+
+        class HelloProp extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h1>Hello {this.props.firstName}</h1>
+                        <p>learning React Version {this.props.version}</p>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render (
+            <HelloProp firstName="reVan" version={16}/>,
+            document.getElementById("react-container")
+        )
+    </script>
+</body>
+</html>
